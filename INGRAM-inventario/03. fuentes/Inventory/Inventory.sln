@@ -1,0 +1,132 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Domain", "..\Inventory.Domain\Inventory.Domain.csproj", "{66F0295C-D2F2-495A-A2BF-963AE2349B1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Business", "..\Inventory.Business\Inventory.Business.csproj", "{7FCFE0D0-BE9E-4828-96DB-ED6F1314702B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Entidades", "1. Entidades", "{B02B3AE3-675A-4EDD-8042-81DEF2FD4BAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Datos", "2. Datos", "{DED26BDC-967B-4DAF-9DA8-10763DA5F41F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Negocio", "5. Negocio", "{E3DDB0CF-B699-42C9-8F8C-C69326E4F40E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Servicios", "6. Servicios", "{CAF782D6-9D54-4BCA-9F12-AAD69AF12A00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7. Presentacion", "7. Presentacion", "{A5B4ECF7-64B4-4295-9A96-8CDC8AB554DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9. Pruebas", "9. Pruebas", "{27E55153-AC0A-465C-84F6-19437A84AD66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Dependencias", "0. Dependencias", "{3A4109BF-D4D1-49CD-A7CF-632CBDC76DA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Web", "..\Inventory.Web\Inventory.Web.csproj", "{D3C189C4-27FE-4C7B-A239-5DEABBAD8698}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Repositorio", "3. Repositorio", "{7A3A8C79-0A36-4219-B485-F27430BA1331}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8. Instaladores", "8. Instaladores", "{DEC62543-F6E7-4364-A674-5533CCE99BD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Data.Access", "..\Inventory.Data.Access\Inventory.Data.Access.csproj", "{DC428A3A-C32B-4793-87E1-5B263DBD46A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Data.Management", "..\Inventory.Data.Management\Inventory.Data.Management.csproj", "{14C3A80D-A93A-4FFF-AA83-9BFCA462C105}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Utilidades", "4. Utilidades", "{E9DD270D-EA4C-4709-98BB-942F0187C789}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Utilities", "..\Inventory.Utilities\Inventory.Utilities.csproj", "{5D1E127C-946D-4134-9C71-3DBFD8A1A192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Test", "..\Inventory.Test\Inventory.Test.csproj", "{3251D686-9AA8-4A5D-8BBB-CA59145D1A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Storage", "..\Inventory.Storage\Inventory.Storage.csproj", "{8C2128B6-7B2B-4F9E-BE40-4A7DB38DAC89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66F0295C-D2F2-495A-A2BF-963AE2349B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F0295C-D2F2-495A-A2BF-963AE2349B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F0295C-D2F2-495A-A2BF-963AE2349B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F0295C-D2F2-495A-A2BF-963AE2349B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FCFE0D0-BE9E-4828-96DB-ED6F1314702B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCFE0D0-BE9E-4828-96DB-ED6F1314702B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCFE0D0-BE9E-4828-96DB-ED6F1314702B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FCFE0D0-BE9E-4828-96DB-ED6F1314702B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C189C4-27FE-4C7B-A239-5DEABBAD8698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C189C4-27FE-4C7B-A239-5DEABBAD8698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C189C4-27FE-4C7B-A239-5DEABBAD8698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C189C4-27FE-4C7B-A239-5DEABBAD8698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC428A3A-C32B-4793-87E1-5B263DBD46A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC428A3A-C32B-4793-87E1-5B263DBD46A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC428A3A-C32B-4793-87E1-5B263DBD46A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC428A3A-C32B-4793-87E1-5B263DBD46A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C3A80D-A93A-4FFF-AA83-9BFCA462C105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C3A80D-A93A-4FFF-AA83-9BFCA462C105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C3A80D-A93A-4FFF-AA83-9BFCA462C105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C3A80D-A93A-4FFF-AA83-9BFCA462C105}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1E127C-946D-4134-9C71-3DBFD8A1A192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1E127C-946D-4134-9C71-3DBFD8A1A192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1E127C-946D-4134-9C71-3DBFD8A1A192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1E127C-946D-4134-9C71-3DBFD8A1A192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3251D686-9AA8-4A5D-8BBB-CA59145D1A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3251D686-9AA8-4A5D-8BBB-CA59145D1A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3251D686-9AA8-4A5D-8BBB-CA59145D1A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3251D686-9AA8-4A5D-8BBB-CA59145D1A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C2128B6-7B2B-4F9E-BE40-4A7DB38DAC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2128B6-7B2B-4F9E-BE40-4A7DB38DAC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2128B6-7B2B-4F9E-BE40-4A7DB38DAC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2128B6-7B2B-4F9E-BE40-4A7DB38DAC89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66F0295C-D2F2-495A-A2BF-963AE2349B1D} = {B02B3AE3-675A-4EDD-8042-81DEF2FD4BAB}
+		{7FCFE0D0-BE9E-4828-96DB-ED6F1314702B} = {E3DDB0CF-B699-42C9-8F8C-C69326E4F40E}
+		{D3C189C4-27FE-4C7B-A239-5DEABBAD8698} = {A5B4ECF7-64B4-4295-9A96-8CDC8AB554DC}
+		{DC428A3A-C32B-4793-87E1-5B263DBD46A3} = {DED26BDC-967B-4DAF-9DA8-10763DA5F41F}
+		{14C3A80D-A93A-4FFF-AA83-9BFCA462C105} = {DED26BDC-967B-4DAF-9DA8-10763DA5F41F}
+		{5D1E127C-946D-4134-9C71-3DBFD8A1A192} = {E9DD270D-EA4C-4709-98BB-942F0187C789}
+		{3251D686-9AA8-4A5D-8BBB-CA59145D1A16} = {27E55153-AC0A-465C-84F6-19437A84AD66}
+		{8C2128B6-7B2B-4F9E-BE40-4A7DB38DAC89} = {7A3A8C79-0A36-4219-B485-F27430BA1331}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://impactis.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\Inventory.Domain\\Inventory.Domain.csproj
+		SccProjectTopLevelParentUniqueName1 = Inventory.sln
+		SccProjectName1 = ../Inventory.Domain
+		SccLocalPath1 = ..\\Inventory.Domain
+		SccProjectUniqueName2 = ..\\Inventory.Business\\Inventory.Business.csproj
+		SccProjectTopLevelParentUniqueName2 = Inventory.sln
+		SccProjectName2 = ../Inventory.Business
+		SccLocalPath2 = ..\\Inventory.Business
+		SccProjectUniqueName3 = ..\\Inventory.Web\\Inventory.Web.csproj
+		SccProjectTopLevelParentUniqueName3 = Inventory.sln
+		SccProjectName3 = ../Inventory.Web
+		SccLocalPath3 = ..\\Inventory.Web
+		SccProjectUniqueName4 = ..\\Inventory.Data.Access\\Inventory.Data.Access.csproj
+		SccProjectTopLevelParentUniqueName4 = Inventory.sln
+		SccProjectName4 = ../Inventory.Data.Access
+		SccLocalPath4 = ..\\Inventory.Data.Access
+		SccProjectUniqueName5 = ..\\Inventory.Data.Management\\Inventory.Data.Management.csproj
+		SccProjectTopLevelParentUniqueName5 = Inventory.sln
+		SccProjectName5 = ../Inventory.Data.Management
+		SccLocalPath5 = ..\\Inventory.Data.Management
+		SccProjectUniqueName6 = ..\\Inventory.Utilities\\Inventory.Utilities.csproj
+		SccProjectTopLevelParentUniqueName6 = Inventory.sln
+		SccProjectName6 = ../Inventory.Utilities
+		SccLocalPath6 = ..\\Inventory.Utilities
+		SccProjectUniqueName7 = ..\\Inventory.Test\\Inventory.Test.csproj
+		SccProjectTopLevelParentUniqueName7 = Inventory.sln
+		SccProjectName7 = ../Inventory.Test
+		SccLocalPath7 = ..\\Inventory.Test
+		SccProjectUniqueName8 = ..\\Inventory.Storage\\Inventory.Storage.csproj
+		SccProjectTopLevelParentUniqueName8 = Inventory.sln
+		SccProjectName8 = ../Inventory.Storage
+		SccLocalPath8 = ..\\Inventory.Storage
+	EndGlobalSection
+EndGlobal

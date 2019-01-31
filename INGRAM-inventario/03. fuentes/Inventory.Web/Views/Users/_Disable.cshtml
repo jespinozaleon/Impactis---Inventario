@@ -1,0 +1,30 @@
+﻿@model  Inventory.Web.Models.Users.PopUpModel
+
+@using (Html.BeginForm("Disable", "Users", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.UserId)
+    <div class="panel panel-default toggle panelMove panelClose panelRefresh">
+        <!-- Start .panel -->
+        <div class="panel-heading">
+            <button type="button" class="close" data-dismiss="modal" style="margin-top:5px;" aria-hidden="true">×</button>
+
+            <h4 class="panel-title">Deshabilitar Usuario</h4>
+        </div>
+        <div class="panel-body">
+            <div class="bs-callout bs-callout-danger in mt10">
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label>¿Desea deshabilitar acceso al Usuario seleccionado?</label>
+                    </div>
+                </div>
+
+            </div>
+            @*<button class="btn btn-default mr5 mb10" data-toggle="modal" data-target="#panelModal">Deshabilitar</button>*@
+            <button class="btn btn-default mr5 mb10">Inhabilitar</button>
+        </div>
+    </div>
+}
+
+
+
+

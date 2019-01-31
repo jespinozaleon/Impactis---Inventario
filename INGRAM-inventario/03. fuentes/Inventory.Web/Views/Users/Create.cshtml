@@ -1,0 +1,238 @@
+﻿@model Inventory.Web.Models.Users.UserModel
+@{
+    ViewBag.Title = "Creación de Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section>
+@using (Html.BeginForm("Create", "Users"))
+{
+    <div class="row form-group">
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-10">
+                    <h2>@ViewBag.Title</h2>
+                </div>
+
+                <div class="col-md-1">
+                    &nbsp;
+                </div>     <!-- /.row -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-10">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Datos de Usuario
+                        </div>
+                        <div class="panel-body">
+                            <div class="row form-group">
+                                <div class="col-md-1">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(m => m.UserName)
+                                </div>
+                                <div class="col-md-3">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(m => m.Password)
+                                </div>
+                                <div class="col-md-2">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-1">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                  @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @onchange = "SearchUser();" , @maxlength = "20" })
+                                </div>
+                                <div class="col-md-3">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                   @Html.PasswordFor(m => m.Password, new { @class = "form-control", @readonly = "readonly" })
+                                </div>
+                                <div class="col-md-2">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-1">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(m => m.Name)
+                                </div>
+                                <div class="col-md-3">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(m => m.Email)
+                                </div>
+                                <div class="col-md-2">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-1">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @readonly = "readonly" })
+                                </div>
+                                <div class="col-md-3">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                   @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @readonly = "readonly" })
+                                </div>
+                                <div class="col-md-2">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-md-1">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(m => m.ProfileId)
+                                </div>
+                                <div class="col-md-8">
+                                    &nbsp;
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-md-1">
+                                    &nbsp;
+                                </div>
+                                <div class="col-md-3">
+                                   @Html.DropDownListFor(m => m.ProfileId, new SelectList(Model.Profiles, "Id", "Description", Model.ProfileId), new { @style = "width:90%;", @class = "form-control" })
+                                </div>
+                                <div class="col-md-8">
+                                    &nbsp;
+                                </div>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+
+   
+            <div class="row">
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-10">
+                    @Html.ActionSuccess(Model.MessageSuccess)
+                    @Html.ActionError(Model.MessageError)
+                </div>
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+                <div class="col-md-10">
+                    <button type="submit" class="btn btn-success mr5 mb10"> Guardar Usuario </button>
+                    &nbsp;
+                    <a href="@Url.Action("Create", "Users")" class="btn btn-default mr5 mb10">Limpiar  </a>
+                    &nbsp;
+                    @Html.ActionLink("Listado de Usuarios", "Index", "Users")
+                </div>     <!-- /.row -->
+                <div class="col-md-1">
+                    &nbsp;
+                </div>
+            </div>
+
+           <br/>
+
+
+
+
+        </div>
+
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+    </div>
+    }
+
+
+</section>
+
+
+
+
+@section scripts
+{
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var userName = $('#UserName').val();
+            if (userName != '') {
+                $('#Name').attr("readonly", false);
+                $('#Email').attr("readonly", false);
+                $('#Password').attr("readonly", false);
+                $("#UserName").prop('readonly', 'readonly');
+            }
+        });
+        function SearchUser() {
+
+            var userName = $('#UserName').val();
+
+            $.ajax({
+                type: "POST",
+                url: "../Users/SearchUser/",
+                data: JSON.stringify({ "userName": userName }),
+                success: function (data) {
+                    if (data.success == 1) {
+                        alert("El Nombre de Usuario "+'@Model.UserName'+ " ingresado ya se encuentra registrado.");
+                        $('#UserName').val('');
+                    }
+                    else if (data.success == 2) {
+                        alert("El Nombre de Usuario "+'@Model.UserName'+ " no tiene permitido acceder, verificar permisos de acceso.");
+                        $('#UserName').val('');
+                    }
+                    else if (data.success == 0) {
+                        $('#UserName').prop('readonly', 'readonly');
+                        $('#Name').attr("readonly", false);
+                        $('#Email').attr("readonly", false);
+                        $('#Password').attr("readonly", false);
+                    }
+                },
+                error: function () {
+                    alert('Error procesando los datos. Por favor intente nuevamente.');
+                },
+                dataType: 'json',
+                contentType: 'application/json'
+            });
+        }
+
+    </script>
+
+
+}

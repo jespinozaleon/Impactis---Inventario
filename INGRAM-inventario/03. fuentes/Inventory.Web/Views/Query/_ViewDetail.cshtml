@@ -1,0 +1,141 @@
+﻿@model  Inventory.Web.Models.Query.PopUpModel
+
+<div class="modal-header modal-head-color" style="width:1050px;">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h2 class="modal-title" id="myModalLabel">Stock Producto</h2>
+</div>
+<div class="modal-body" style="width:1050px;">
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.VDR_PARTNB)
+        </div>
+        <div class="col-md-4">
+            <strong>@Model.VDR_PARTNB</strong>
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.SKU)
+        </div>
+        <div class="col-md-4">
+            <strong>@Model.SKU</strong>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.SKU_DESC)
+        </div>
+        <div class="col-md-4">
+            <strong>@Model.SKU_DESC</strong>
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.VDR_NAME)
+        </div>
+        <div class="col-md-4">
+            <strong>@Model.VDR_NAME</strong>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.STOCK)
+        </div>
+        <div class="col-md-4" style="color:red;">
+            @if (Model.STOCK.HasValue)
+            {
+                <strong>@Model.STOCK.Value.ToString("N0").Replace(',', '.')</strong>
+            }
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.NET_AMOUNT)
+        </div>
+        <div class="col-md-4">
+                @if (Model.NET_AMOUNT.HasValue)
+                {
+                    <strong>USD</strong><strong> @(Model.NET_AMOUNT.Value.ToString("0.00"))</strong>
+                }
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.TAX_AMOUNT)
+        </div>
+        <div class="col-md-4">
+     
+                @if (Model.TAX_AMOUNT.HasValue)
+                {
+                    <strong>USD</strong><strong> @(Model.TAX_AMOUNT.Value.ToString("0.00"))</strong>
+                }
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.TOTAL_AMOUNT)
+        </div>
+        <div class="col-md-4" style="color:red;">
+
+                @if (Model.TOTAL_AMOUNT.HasValue)
+                {
+                    <strong>USD</strong><strong> @(Model.TOTAL_AMOUNT.Value.ToString("0.00"))</strong>
+                }
+      
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-2">
+            @Html.LabelFor(m => m.TIMESTAMP)
+        </div>
+        <div class="col-md-4">
+            @if (Model.TIMESTAMP.HasValue)
+            {
+                <strong>@Model.TIMESTAMP.Value.ToString("dd-MM-yyyy HH:mm:ss")</strong>
+            }
+        </div>
+        <div class="col-md-6">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-12">
+            <h4>Últimas 10 consultas</h4>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+        <div class="col-md-10">
+            <div style="height:200px;overflow:auto;">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width:20%;">STOCK</th>
+                            <th style="width:20%;">MONTO NETO</th>
+                            <th style="width:20%;">MONTO IVA</th>
+                            <th style="width:20%;">MONTO TOTAL</th>
+                            <th style="width:20%;">FECHA CONSULTA</th>
+                            <th style="width:20%;">USUARIO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var data in Model.Result)
+                        {
+                            <tr>
+                                <td style="width:20%; text-align:right;">@data.STOCK.ToString("N0").Replace(',', '.')</td>
+                                <td style="width:20%;">USD @data.NET_AMOUNT.ToString("0.00")</td>
+                                <td style="width:20%;">USD @data.TAX_AMOUNT.ToString("0.00")</td>
+                                <td style="width:20%;">USD @data.TOTAL_AMOUNT.ToString("0.00")</td>
+                                <td style="width:20%;">
+                                    @data.TIMESTAMP.ToString("dd-MM-yyyy HH:mm:ss")
+                                </td>
+                                <td style="width:20%;">@data.USER_NAME</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+    </div>
+
+</div>
+
+    
+

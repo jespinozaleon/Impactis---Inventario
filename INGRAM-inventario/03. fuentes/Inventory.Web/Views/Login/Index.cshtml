@@ -1,0 +1,68 @@
+﻿@model Inventory.Web.Models.Login.IndexModel
+
+@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <img class="img-responsive" src="~/Content/img/logo_cliente.png" />
+        &nbsp;
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="col-md-4 col-md-offset-4">
+
+        <div class="login-panel panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title" style="display:inline">Ingreso al sistema</h3>
+            </div>
+            <div class="panel-body">
+                @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { autocomplete = "off" }))
+                {
+                    @Html.HiddenFor(model => model.ReturnUrl)
+
+                    <fieldset>
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", placeholder = "Nombre Usuario", autofocus = "true", autocomplete = "off" })
+                        </div>
+                        <hr />
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = "Contraseña", type = "password", autocomplete = "off" })
+                        </div>
+                        <hr />
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    @Html.CheckBoxFor(model => model.RememberMe)
+                                    Recordar contraseña
+                                </label>
+                            </div>
+                        </div>
+                        <hr />
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fa fa-sign-in"></i>  Ingresar
+                        </button>
+                    </fieldset>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1">
+        &nbsp;
+    </div>
+    <div class="col-md-10">
+        @Html.ActionError(Model.MessageError)
+    </div>
+    <div class="col-md-1">
+        &nbsp;
+    </div>
+</div>

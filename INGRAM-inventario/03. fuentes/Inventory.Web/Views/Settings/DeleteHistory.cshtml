@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Eliminar Historial de Consultas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section>
+        <div class="row form-group">
+            <div class="col-md-1">
+                &nbsp;
+            </div>
+            <div class="col-md-10">
+                <div class="row form-group">
+                    <div class="col-md-1">
+                        &nbsp;
+                    </div>
+                    <div class="col-md-10">
+                        <h2>@ViewBag.Title</h2>
+                    </div>
+
+                    <div class="col-md-1">
+                        &nbsp;
+                    </div>     <!-- /.row -->
+                </div>
+
+             
+                <br /><br /><br /><br />
+                <div class="row form-group">
+                    <div class="col-md-12" style="text-align:center;">
+                        <strong>Eliminar el historial de Consultas </strong>
+                    </div>
+                </div>
+                <br />
+                <div class="row form-group">
+                    <div class="col-md-6" style="text-align:right;">
+                        <a href="@Url.Action("DeleteOk", "Settings")" class="btn btn-success mr5 mb10"> Eliminar </a>
+
+                    </div>
+                    <div class="col-md-6" style="text-align:left;">
+                        <a href="@Url.Action("DeleteCancel", "Settings")" class="btn btn-danger mr5 mb10"> Cancelar </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-1">
+                &nbsp;
+            </div>
+        </div>
+</section>
+
+
